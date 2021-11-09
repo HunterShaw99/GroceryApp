@@ -1,30 +1,51 @@
 # GroceryApp
 Mobile app used to help make remembering grocery items even easier. No more pen &amp; paper!
 
-
-
 ## Project Requirements
-The grocery app has many features!
-* Data persistence
-* Editing grocery items
-* Deleting grocery items
-* Handles null
+The grocery app had a few requirements for each page within the app. The final app has implemented all requirements, and does not crash.
+### Main Page 
+The title "Grocery List" should appear on the main page.
+Your name must appear in a label at the above the grocery list.
+If there are no items in the list, your page should have a informational label with "Add some groceries."
+If there are items in the list, show the grocery list.
+Each list item shows the category name - grocery name.  For example:   Beverages - Skim Milk
+On the second line, show the quantity.  Note that the quantity can be a real number  ( eg. 2.5 pounds of ground beef).
+There is a plus "+" button in the title bar that adds a new grocery item to the list.
+The + button takes you to a detail screen.
+Groceries are listed in the main screen.  If the user taps a grocery, they are also taken to the detail screen but where they can edit the grocery.
+### Details Page 
+The detail screen has three input fields.  Grocery Item Name, quantity, and picker wheel with a category.
+Grocery Item name is required.  Category and quantity is not required.  User input errors should be gracefully handled.
+Note that the user can navigate to this screen by either adding a new grocery or editing an existing grocery.
+There are always buttons on the bottom with Save and Cancel.   If a user is Editing, there is a delete button as well.
+Save - Saves the data and persists it to a file in JSON format.  User returns back to the main screen.  List of groceries displayed reflect the changes.
+Cancel -  User returns back to the main screen with no changes.
+Delete - Item is deleted. User returns back to the main screen.  List of groceries displayed reflect the changes.  This button is only visible if the user is editing.
+An empty quantity should stay empty.  It should not default to a 0.
+Similarly, if not category is selected, do not default to the first category.  Your picker can just show the placeholder text.
 
-## Tools
-* Visual Studio
-* Xamarin 
-* Android sdk
-
-## App preview
-### Empty grocery list
-![ScreenShot](/screenshots/GroceryAppMainView.png)
-### Category option wheel for items
-![ScreenShot](/screenshots/GroceryAppPickerWheel.png)
-### Adding item to the grocery list
-![ScreenShot](/screenshots/GroceryAppAddItem.png)
-### Current list of grocery items
-![ScreenShot](/screenshots/GroceryAppListView.png)
-### Editing quantity of an item
-![ScreenShot](/screenshots/GroceryAppEditItem.png)
+## How does it work? - behind the scenes
+### Data handling
+The real heart of the project lies within the handling of data. All data is processed inside a singelton, where CRUD operations are used to manage the data. The main page subscribes to the singelton to get notified of the creation, update and deletion of the data. 
+#### Read data
+The main page of the app is where data is read and displayed to the user. This is done through binding data pieces to a listview.
+![ScreenShot](/screenshots/listEmpty.png)
+#### Create/Update data
+The details page is where data is created and also updated. Users can either click the + sign in the Toolbar to add a new item to the grocery list. This action will bring the details page to the top of the page stack, and allow the user to enter common grocery items. No field on this page is required except for the name of the actual item. Further, the user can just select something from the listview which will bring up the details page populated with appropriate data. From here all fields can be removed except for the name field.
+### Adding an item to the list
+![ScreenShot](/screenshots/additem.png)
+![ScreenShot](/screenshots/error.png)
+![ScreenShot](/screenshots/listFull.png)
+#### Delete data
+Lastly, the user can delete items from the grocery list. When an item is selected from the list, a delete button appears on the details page. 
+### Editing item from list
+![ScreenShot](/screenshots/edititem.png)
 ### Finalized grocery list
-![ScreenShot](/screenshots/GroceryAppFinishedlist.png)
+One item has been edited, and another deleted. (left -> right, final & beginning lists)
+
+![ScreenShot](/screenshots/finalList.png)
+![ScreenShot](/screenshots/listFull.png)
+
+## Installation 
+### Prerequisites
+
