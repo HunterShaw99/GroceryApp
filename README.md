@@ -3,7 +3,7 @@ Mobile app used to help make remembering grocery items even easier. No more pen 
 
 ## Project Requirements
 The grocery app had a few requirements for each page within the app. The final app has implemented all requirements, and does not crash.
-### Main Page 
+### Main page 
 The title "Grocery List" should appear on the main page.
 Your name must appear in a label at the above the grocery list.
 If there are no items in the list, your page should have a informational label with "Add some groceries."
@@ -13,7 +13,7 @@ On the second line, show the quantity.  Note that the quantity can be a real num
 There is a plus "+" button in the title bar that adds a new grocery item to the list.
 The + button takes you to a detail screen.
 Groceries are listed in the main screen.  If the user taps a grocery, they are also taken to the detail screen but where they can edit the grocery.
-### Details Page 
+### Details page 
 The detail screen has three input fields.  Grocery Item Name, quantity, and picker wheel with a category.
 Grocery Item name is required.  Category and quantity is not required.  User input errors should be gracefully handled.
 Note that the user can navigate to this screen by either adding a new grocery or editing an existing grocery.
@@ -46,6 +46,19 @@ One item has been edited, and another deleted. (left -> right, final & beginning
 ![ScreenShot](/screenshots/finalList.png)
 ![ScreenShot](/screenshots/listFull.png)
 
+## Tools/Libraries
+* Newtonsoft
+* LINQ
+* Xamarin/C#
+* Visual Studio
+
 ## Installation 
 ### Prerequisites
+For this project, it will be assumed that Visual Studio is installed and has the Xamarin module installed as well. Also, due to the size the project will need to be downloaded https://pitt-my.sharepoint.com/:u:/g/personal/hms75_pitt_edu/EVEa6XlQ6hhKml3lsclC4PsB4WeiZwTPfX8StstecaYuTw?e=4%3awl0HT0&at=9. 
+### Run project
+1. Extract the .zip to any directory of your choice.
+2. Open GroceryApp/GroceryApp.sln file in Visual Studio
+3. Go to top toolbar click Build --> Build GroceryApp to build the project
+4. Make sure to have either IOS/Android emulator installed and set up correctly
+5. Run project in prefered emulated OS 
 
