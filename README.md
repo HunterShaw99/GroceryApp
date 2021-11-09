@@ -3,7 +3,7 @@ Mobile app used to help make remembering grocery items even easier. No more pen 
 
 ## Project Requirements
 The grocery app had a few requirements for each page within the app. The final app has implemented all requirements, and does not crash.
-### Main page 
+### Main Page 
 The title "Grocery List" should appear on the main page.
 Your name must appear in a label at the above the grocery list.
 If there are no items in the list, your page should have a informational label with "Add some groceries."
@@ -13,7 +13,7 @@ On the second line, show the quantity.  Note that the quantity can be a real num
 There is a plus "+" button in the title bar that adds a new grocery item to the list.
 The + button takes you to a detail screen.
 Groceries are listed in the main screen.  If the user taps a grocery, they are also taken to the detail screen but where they can edit the grocery.
-### Details page 
+### Details Page 
 The detail screen has three input fields.  Grocery Item Name, quantity, and picker wheel with a category.
 Grocery Item name is required.  Category and quantity is not required.  User input errors should be gracefully handled.
 Note that the user can navigate to this screen by either adding a new grocery or editing an existing grocery.
@@ -24,23 +24,23 @@ Delete - Item is deleted. User returns back to the main screen.  List of groceri
 An empty quantity should stay empty.  It should not default to a 0.
 Similarly, if not category is selected, do not default to the first category.  Your picker can just show the placeholder text.
 
-## How does it work? - behind the scenes
-### Data handling
-The real heart of the project lies within the handling of data. All data is processed inside a singelton, where CRUD operations are used to manage the data. The main page subscribes to the singelton to get notified of the creation, update and deletion of the data. 
-#### Read data
-The main page of the app is where data is read and displayed to the user. This is done through binding data pieces to a listview.
+## How Does it Work? - Behind the Scenes
+### Data Handling
+The real heart of the project lies within the handling of data. All data is processed inside a singleton, where CRUD operations are used to manage the data. The main page subscribes to the singleton to get notified of the creation, update, and deletion of the data.
+#### Read Data
+The main page of the app is where data is read and displayed to the user. This is done through binding data pieces to a list view.
 
 ![ScreenShot](/screenshots/listEmpty.png)
-#### Create/Update data
-The details page is where data is created and also updated. Users can either click the + sign in the Toolbar to add a new item to the grocery list. This action will bring the details page to the top of the page stack, and allow the user to enter common grocery items. No field on this page is required except for the name of the actual item. Further, the user can just select something from the listview which will bring up the details page populated with appropriate data. From here all fields can be removed except for the name field.
-### Adding an item to the list
+#### Create/Update Data
+The details page is where data is created and updated. Users can either click the + sign in the Toolbar to add a new item to the grocery list. This action will bring the details page to the top of the page stack and allow the user to enter common grocery items. No field on this page is required except for the name of the actual item. Further, the user can just select something from the list view which will bring up the details page populated with appropriate data. From here all fields can be removed except for the name field.
+### Adding an Item to the List
 ![ScreenShot](/screenshots/additem.png)![ScreenShot](/screenshots/error.png) 
 ![ScreenShot](/screenshots/listFull.png)
-#### Delete data
+#### Delete Data
 Lastly, the user can delete items from the grocery list. When an item is selected from the list, a delete button appears on the details page. 
-### Editing item from list
+### Editing Item From List
 ![ScreenShot](/screenshots/edititem.png)
-### Finalized grocery list
+### Finalized Grocery List
 One item has been edited, and another deleted. (left -> right, final & beginning lists)
 
 ![ScreenShot](/screenshots/finalList.png)![ScreenShot](/screenshots/listFull.png)
@@ -54,11 +54,11 @@ One item has been edited, and another deleted. (left -> right, final & beginning
 
 ## Installation 
 ### Prerequisites
-For this project, it will be assumed that Visual Studio is installed and has the Xamarin module installed as well. Also, due to the size the project will need to be downloaded https://pitt-my.sharepoint.com/:u:/g/personal/hms75_pitt_edu/EVEa6XlQ6hhKml3lsclC4PsB4WeiZwTPfX8StstecaYuTw?e=4%3awl0HT0&at=9. 
-### Run project
+For this project, it will be assumed that Visual Studio is installed and has the Xamarin module installed as well. Also, due to the size the project and GitHub limitations the solution does not have an IOS/Android project with the solution. This can be easily fixed by adding the preferred mobile project to the solution.
+### Run Project
 1. Extract the .zip to any directory of your choice.
 2. Open GroceryApp/GroceryApp.sln file in Visual Studio
 3. Go to top toolbar click Build --> Build GroceryApp to build the project
-4. Make sure to have either IOS/Android emulator installed and set up correctly
-5. Run project in prefered emulated OS 
+4. Make sure to have either IOS/Android emulator installed and set up correctly inside of the solution
+5. Run the project
 
