@@ -29,12 +29,12 @@ Similarly, if not category is selected, do not default to the first category.  Y
 The real heart of the project lies within the handling of data. All data is processed inside a singelton, where CRUD operations are used to manage the data. The main page subscribes to the singelton to get notified of the creation, update and deletion of the data. 
 #### Read data
 The main page of the app is where data is read and displayed to the user. This is done through binding data pieces to a listview.
+
 ![ScreenShot](/screenshots/listEmpty.png)
 #### Create/Update data
 The details page is where data is created and also updated. Users can either click the + sign in the Toolbar to add a new item to the grocery list. This action will bring the details page to the top of the page stack, and allow the user to enter common grocery items. No field on this page is required except for the name of the actual item. Further, the user can just select something from the listview which will bring up the details page populated with appropriate data. From here all fields can be removed except for the name field.
 ### Adding an item to the list
-![ScreenShot](/screenshots/additem.png)
-![ScreenShot](/screenshots/error.png)
+![ScreenShot](/screenshots/additem.png)![ScreenShot](/screenshots/error.png) 
 ![ScreenShot](/screenshots/listFull.png)
 #### Delete data
 Lastly, the user can delete items from the grocery list. When an item is selected from the list, a delete button appears on the details page. 
@@ -43,8 +43,8 @@ Lastly, the user can delete items from the grocery list. When an item is selecte
 ### Finalized grocery list
 One item has been edited, and another deleted. (left -> right, final & beginning lists)
 
-![ScreenShot](/screenshots/finalList.png)
-![ScreenShot](/screenshots/listFull.png)
+![ScreenShot](/screenshots/finalList.png)![ScreenShot](/screenshots/listFull.png)
+
 
 ## Tools/Libraries
 * Newtonsoft
