@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroceryApp.MainPage"
+             Title = "Grocery List">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" 
+                     Clicked="ToolbarItem_Clicked" 
+                     Order="Default"
+                     Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Label Text="Name: Hunter M. Shaw" />
+        <Label x:Name="HideLBL"  Text="Add Some Groceries" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+        <ListView x:Name="ItemList"  ItemTapped="ItemList_ItemTapped" BackgroundColor="LightGray">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding CategoryNameField}" TextColor="Blue" Detail="{Binding Quantity}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
