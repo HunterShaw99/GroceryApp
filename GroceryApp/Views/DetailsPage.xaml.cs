@@ -34,21 +34,21 @@ namespace GroceryApp
         public DetailsPage(Models.GroceryItem toEdit)
         {
             InitializeComponent();
-            NameField.Text = toEdit.Name;
-            QuantityField.Text = toEdit.Quantity.ToString();
+            itemFocused = toEdit;
+            NameField.Text = itemFocused.Name;
+            QuantityField.Text = itemFocused.Quantity.ToString();
             picker.ItemsSource = categoryLIST;
-            int categoryIndex = SearchList(categoryLIST, toEdit.Category);
+            int categoryIndex = SearchList(categoryLIST, itemFocused.Category);
             picker.SelectedIndex = categoryIndex;
             DeleteBTN.IsVisible = true;
             isEdit = true;
-            itemFocused = toEdit;
         }
 
         override protected void OnDisappearing()
         {
             itemFocused = null;
-            categoryLIST.Clear();
         }
+
         void SaveBTN_Clicked(object sender, EventArgs e)
         {
             NameField.Text = TrimText(NameField.Text);
